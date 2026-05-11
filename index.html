@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-Frame-Options" content="DENY">
+  <title>Ludovica Pangrazio - SRE</title>
+  <link rel="icon" type="image/png" href="assets/img/icons8-stella-isometric-line-32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,300;0,400;0,500;0,700;1,300&family=Space+Grotesk:wght@400;700;800&display=swap"
+    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Sans+Mono:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Silkscreen&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@2.17.0/devicon.min.css" integrity="sha384-6iv3tXABd3c9DYulXujJl8n22ahn/12f45MomxoPv6jBX4LBE4gNJjfkx5mAKIqR" crossorigin="anonymous"> 
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.44.0/dist/tabler-icons.min.css" integrity="sha384-ccZHbezhtZWmNy0cg8odL0D/jFU5k5HIls9y78Qd6lWor7rpvFIZtK0fTFG4z456" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <!-- ##### cool cursor ##### -->
+  <div class="cursor" id="cursor"></div>
+
+  <!-- ##### nav bar ##### -->
+  <nav>
+    <div class="nav-logo">lu@portfolio:~$<span class="blink"></span></div>
+    <ul class="nav-links">
+      <li><a href="#hero"><i class="ti ti-home"></i> home</a></li>
+      <li><a href="#experience"><i class="ti ti-briefcase"></i> experience</a></li>
+      <li><a href="#skills"><i class="ti ti-code"></i> skills</a></li>
+      <li><a href="#projects"><i class="ti ti-folder"></i> projects</a></li>
+      <li><a href="#contact"><i class="ti ti-mail"></i> contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- ##### hero page ##### -->
+  <section id="hero-bg">
+    <div id="hero">
+      <div class="hero-text">
+        <p class="hero-prompt">
+          <span>lu@portfolio:~$</span> <span id="typingText"></span><span class="typing-cursor">▌</span>
+        </p>
+        <h1 class="hero-name">Ludovica<br><span class="accent">Pangrazio</span></h1>
+        <p class="hero-role">
+          <br>
+          <span class="tag-role">Site Reliability Engineer</span>
+          &nbsp;·&nbsp; Cloud &amp; DevOps Specialist
+          <br>
+        </p>
+        <p class="hero-bio">
+          Driven by curiosity, continuous improvement, and a genuine love for building things that work seamlessly.
+          I work on <span class="hl">cloud infrastructure</span> and <span class="hl">automation</span>, from <span
+            class="hl">CI/CD pipelines</span> and <span class="hl">Kubernetes clusters</span> to <span
+            class="hl">Ansible workflows</span>,
+          <span class="hl">Terraform modules</span>, and <span class="hl">cloud cost visibility</span>, with a growing
+          pull towards reliability engineering and distributed systems.
+          <br><br>When I'm not at work, I like to build personal projects and PoCs to explore new ideas hands-on.
+        </p>
+        <div class="hero-cta">
+          <a href="#contact" class="btn btn-green">./contact.sh</a>
+          <a href="#experience" class="btn btn-outline">cat experience.log</a>
+        </div>
+      </div>
+
+      <div class="hero-avatar">
+        <div class="avatar-frame">
+          <div class="avatar-hex"></div>
+          <div class="avatar-circle">
+            <img src="assets/img/avatar.JPEG" alt="Me">
+            <div class="avatar-placeholder">MR</div>
+          </div>
+          <div class="avatar-badge">ONLINE</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ##### exp ##### -->
+  <div class="section-wrap" id="experience">
+    <p class="sec-label">experience</p>
+    <h2 class="sec-title">Work experience <span class="dim">// past & current</span></h2>
+    <div class="sec-divider"></div>
+    <div class="timeline" id="experienceTimeline"></div>
+
+    <!-- ##### skillset ##### -->
+    <div class="section-wrap" id="skills">
+      <p class="sec-label">skills</p>
+      <h2 class="sec-title">Technologies <span class="dim">// my stack</span></h2>
+      <div class="sec-divider"></div>
+
+      <div class="skills-grid">
+
+        <div class="skills-category">Observability</div>
+
+        <div class="skill-item" data-pct="75">
+          <div class="skill-header">
+            <span class="skill-name"><span class="lang">●</span>Dynatrace</span>
+          </div>
+          <div class="skill-bar-bg">
+            <div class="skill-bar-fill"><span class="skill-pct">75%</span></div>
+          </div>
+        </div>
+        <div class="skill-item" data-pct="65">
+          <div class="skill-header">
+            <span class="skill-name"><span class="lang">●</span>IBM Cloud Monitoring</span>
+          </div>
+          <div class="skill-bar-bg">
+            <div class="skill-bar-fill"><span class="skill-pct">65%</span></div>
+          </div>
+        </div>
+
+        <div class="skills-category">infrastructure &amp; cloud</div>
+
+        <div class="skill-item" data-pct="80">
+          <div class="skill-header">
+            <span class="skill-name"><span class="lang">●</span>Kubernetes &amp; OpenShift</span>
+          </div>
+          <div class="skill-bar-bg">
+            <div class="skill-bar-fill"><span class="skill-pct">80%</span></div>
+          </div>
+        </div>
+        <div class="skill-item" data-pct="75">
+          <div class="skill-header">
+            <span class="skill-name"><span class="lang">●</span>AWS, GCP, OCI</span>
+          </div>
+          <div class="skill-bar-bg">
+            <div class="skill-bar-fill"><span class="skill-pct">75%</span></div>
+          </div>
+        </div>
+        <div class="skill-item" data-pct="85">
+          <div class="skill-header">
+            <span class="skill-name"><span class="lang">●</span>Terraform / IaC</span>
+          </div>
+          <div class="skill-bar-bg">
+            <div class="skill-bar-fill"><span class="skill-pct">85%</span></div>
+          </div>
+        </div>
+        <div class="skill-item" data-pct="70">
+          <div class="skill-header">
+            <span class="skill-name"><span class="lang">●</span>Linux</span>
+          </div>
+          <div class="skill-bar-bg">
+            <div class="skill-bar-fill"><span class="skill-pct">70%</span></div>
+          </div>
+        </div>
+
+        <div class="skills-category">automation</div>
+
+        <div class="skill-item" data-pct="85">
+          <div class="skill-header">
+            <span class="skill-name"><span class="lang">●</span>Ansible</span>
+          </div>
+          <div class="skill-bar-bg">
+            <div class="skill-bar-fill"><span class="skill-pct">85%</span></div>
+          </div>
+        </div>
+        <div class="skill-item" data-pct="85">
+          <div class="skill-header">
+            <span class="skill-name"><span class="lang">●</span>GitLab CI/CD</span>
+          </div>
+          <div class="skill-bar-bg">
+            <div class="skill-bar-fill"><span class="skill-pct">85%</span></div>
+          </div>
+        </div>
+        <div class="skill-item" data-pct="85">
+          <div class="skill-header">
+            <span class="skill-name"><span class="lang">●</span>Jenkins</span>
+          </div>
+          <div class="skill-bar-bg">
+            <div class="skill-bar-fill"><span class="skill-pct">85%</span></div>
+          </div>
+        </div>
+        <div class="skill-item" data-pct="75">
+          <div class="skill-header">
+            <span class="skill-name"><span class="lang">●</span>GitHub Actions</span>
+          </div>
+          <div class="skill-bar-bg">
+            <div class="skill-bar-fill"><span class="skill-pct">75%</span></div>
+          </div>
+        </div>
+
+        <div class="skills-category">Languages</div>
+
+        <div class="skill-item" data-pct="92">
+          <div class="skill-header">
+            <span class="skill-name"><span class="lang">●</span>Java</span>
+          </div>
+          <div class="skill-bar-bg">
+            <div class="skill-bar-fill"><span class="skill-pct">92%</span></div>
+          </div>
+        </div>
+        <div class="skill-item" data-pct="86">
+          <div class="skill-header">
+            <span class="skill-name"><span class="lang">●</span>Python</span>
+          </div>
+          <div class="skill-bar-bg">
+            <div class="skill-bar-fill"><span class="skill-pct">75%</span></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ##### my projects + currently learning .... ##### -->
+    <div class="section-wrap" id="projects">
+      <p class="sec-label">projects</p>
+      <h2 class="sec-title">Things I build <span class="dim">// and learn about</span></h2>
+      <div class="sec-divider"></div>
+      <div class="projects-grid" id="projectsGrid"></div>
+    </div>
+
+    <!-- ##### contact area ##### -->
+    <div class="section-wrap" id="contact">
+      <p class="sec-label">contact</p>
+      <h2 class="sec-title">Get in touch <span class="dim">// projects & opportunities</span></h2>
+      <div class="sec-divider"></div>
+
+      <div class="contact-layout">
+
+        <!-- ##### terminal style form ##### -->
+        <div class="terminal-wrap">
+          <div class="term-bar">
+            <div class="term-dot red"></div>
+            <div class="term-dot yellow"></div>
+            <div class="term-dot green"></div>
+            <span class="term-title">bash — send_message.sh</span>
+          </div>
+          <div class="term-body">
+            <div class="term-line"><span class="prompt">$</span><span class="cmd"> ./send_message.sh</span></div>
+            <div class="term-line"><span class="comment"># Fill out the fields to send me a msg</span></div>
+            <div class="term-line" style="margin-top:.5rem"></div>
+
+            <div class="term-input-row">
+              <span class="term-input-label">name &nbsp;&nbsp;&nbsp;&nbsp;:&gt;</span>
+              <input class="term-input" id="tName" type="text" placeholder="your name..." autocomplete="off"
+                spellcheck="false">
+            </div>
+            <div class="term-input-row">
+              <span class="term-input-label">email &nbsp;&nbsp;&nbsp;:&gt;</span>
+              <input class="term-input" id="tEmail" type="email" placeholder="your@email.it" autocomplete="off"
+                spellcheck="false">
+            </div>
+            <div class="term-input-row" style="align-items:flex-start; margin-top:.3rem;">
+              <span class="term-input-label" style="line-height:1.7">message &nbsp;:&gt;</span>
+              <textarea class="term-textarea" id="tMsg" rows="1" placeholder="describe your request..."
+                spellcheck="false" style="min-height:5.5rem"></textarea>
+            </div>
+            <div class="term-submit-row">
+              <button class="term-submit" id="termSubmit">[ ENTER ] Send</button>
+              <span class="term-sending" id="termSending">
+                <span class="spinner"></span> send in progress...
+              </span>
+            </div>
+
+            <div id="termOutput"></div>
+          </div>
+        </div>
+
+        <!-- ##### static contact info ##### -->
+        <div class="contact-aside">
+          <p class="aside-title">// contact info</p>
+          <div class="contact-row"><span class="contact-key">email</span><span class="contact-val"><a
+                href="mailto:ludovicapangrazio@gmail.com" target="_blank"
+                rel="noopener noreferrer">ludovicapangrazio@gmail.com</a></span></div>
+          <div class="contact-row"><span class="contact-key">github</span><span class="contact-val"><a
+                href="https://github.com/lud0vicapng" target="_blank"
+                rel="noopener noreferrer">github.com/lud0vicapng</a></span></div>
+          <div class="contact-row"><span class="contact-key">linkedin</span><span class="contact-val"><a
+                href="https://www.linkedin.com/in/ludovicap/" target="_blank"
+                rel="noopener noreferrer">/in/ludovicap</a></span></div>
+          <div class="contact-row"><span class="contact-key">location</span><span class="contact-val">Rome, IT<br><span
+                class="online-badge"><span class="online-dot"></span>remote friendly</span></span></div>
+          <div class="contact-row"><span class="contact-key">timezone</span><span class="contact-val">UTC+2
+              (CEST)</span></div>
+          <div class="contact-row"><span class="contact-key">status</span><span class="contact-val status-open">let's
+              build something cool</span></div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ##### footer and credits to icons8 ##### -->
+    <footer>
+      <p class="foot-copy">© 2026 <span class="hl">LUDOVICA PANGRAZIO</span> — BUILT WITH ♥</p>
+      <div class="foot-links">
+        <a href="https://github.com/lud0vicapng" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a href="https://www.linkedin.com/in/ludovicap/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a href="https://icons8.it/" target="_blank" rel="noopener noreferrer">favicon by icons8</a>
+      </div>
+    </footer>
+
+    <script src="js/experience.js"></script>
+    <script src="js/projects.js"></script>
+    <script src="js/main.js" defer></script>
+</body>
+
+</html>

@@ -1,0 +1,38 @@
+const EXPERIENCE = [
+  {
+    period: "April 2026 — Present",
+    company: "BNL BNP Paribas",
+    area: "Applic. Prod. Digital",
+    location: "Rome, Latium, IT",
+    role: "Application Production Digital COE Expert",
+    description: "As a Cloud-Native Site Reliability Engineer I'm currently involved in project onboarding, infrastructure and K8s/OpenShift cluster provisioning, observability practices, and collaboration in international environments.",
+    tags: ["OpenShift", "Kubernetes", "Dynatrace","IBM Cloud","GitLab CI/CD","Helm","Terraform","Ansible","Python","HLD"],
+  },
+  {
+    period: "July 2025 — April 2026",
+    company: "Noovle (TIM Group)",
+    area: "IT Operations | CC-LINUX",
+    location: "Bari, Apulia, IT",
+    role: "Cloud Infrastructure Engineer",
+    description: "Developed Infrastructure Automation solutions for Noovle/TIM and the Polo Strategico Nazionale (PSN), enabling Italy’s Public Administration Cloud Adoption. Designed and maintained Ansible workflows for VMs hardening and OS-level tasks. Performed System Administration on RHEL. Promoted Agile (Kanban) practices and advocated for DevOps and GitOps principles.",
+    tags: ["Ansible", "AWX", "OCI, GCP","Terraform","RHEL","Bash","Terraform","VMWare vSphere (ESXi, vCenter)","SysAdm"],
+  },
+  {
+    period: "April 2024 — July 2025",
+    company: "Capgemini",
+    area: "Cloud Infrastructure Services",
+    location: "Bari, Apulia, IT",
+    role: "Cloud DevOps Engineer",
+    description: "Developed CI/CD Pipelines to automate infrastructure provisioning and Kubernetes cluster management on AWS EKS. Hardened AWS EKS clusters reducing lateral movement risk. Contributed to incident response & cluster troubleshooting. Built and maintained Terraform modules for multi-cloud environments. Performed multi-cloud cost analysis across AWS, GCP and Azure.",
+    tags: ["Kubernetes", "Kustomize","Dynatrace","Calico","AWS, GCP","Jenkins","Groovy","GitHub Actions","Terraform","Bash, Powershell","Python"],
+  },
+  {
+    period: "Sept 2023 — April 2024",
+    company: "Betacom Group",
+    area: "IT Consulting",
+    location: "Bari, Apulia, IT",
+    role: "DevOps Engineer & Technical trainer",
+    description: "Developed automated test cases for database connectivity and query execution, worked with testing and quality tools and supported Java Applications Development. Configurated CI/CD pipelines for automated build, testing and deployment workflows. <br><br> Delivered on site training sessions on Object-Oriented Programming, Java fundamentals, Software testing, Operating Systems and DevOps concepts. Designed & developed learning materials and evaluated hands-on coding exercises on Java Development.",
+    tags: ["Java", "Maven", "Lombok","Spring","Jenkins","JUnit, Selenium","Git, SVN, BitBucket","SQL","SonarQube","Postman, SoapUI"],
+  },
+];
