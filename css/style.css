@@ -453,10 +453,11 @@ nav {
   margin-bottom: .5rem;
 }
 .job-desc {
-  font-size: .9rem;
+  font-size: .8rem;
   line-height: 1.85;
   color: var(--text-dim);
   margin-bottom: .9rem;
+  white-space: pre-line;
 }
 .job-tags { display: flex; flex-wrap: wrap; gap: .4rem; }
 .tag {
