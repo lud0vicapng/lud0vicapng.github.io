@@ -32,7 +32,7 @@ const EXPERIENCE = [
     area: "IT Consulting",
     location: "Bari, Apulia, IT",
     role: "DevOps Engineer & Technical trainer",
-    description: "Developed automated test cases for database connectivity and query execution, worked with testing and quality tools and supported Java Applications Development. Configurated CI/CD pipelines for automated build, testing and deployment workflows. <br><br> Delivered on site training sessions on Object-Oriented Programming, Java fundamentals, Software testing, Operating Systems and DevOps concepts. Designed & developed learning materials and evaluated hands-on coding exercises on Java Development.",
+    description: "Developed automated test cases for database connectivity and query execution, worked with testing and quality tools and supported Java Applications Development. Configurated CI/CD pipelines for automated build, testing and deployment workflows. \n\n Delivered on site training sessions on Object-Oriented Programming, Java fundamentals, Software testing, Operating Systems and DevOps concepts. Designed & developed learning materials and evaluated hands-on coding exercises on Java Development.",
     tags: ["Java", "Maven", "Lombok","Spring","Jenkins","JUnit, Selenium","Git, SVN, BitBucket","SQL","SonarQube","Postman, SoapUI"],
   },
 ];
