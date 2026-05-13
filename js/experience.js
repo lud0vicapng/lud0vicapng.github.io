@@ -14,8 +14,8 @@ const EXPERIENCE = [
     area: "IT Operations | CC-LINUX",
     location: "Bari, Apulia, IT",
     role: "Cloud Infrastructure Engineer",
-    description: "Developed Infrastructure Automation solutions for Noovle/TIM and the Polo Strategico Nazionale (PSN), enabling Italy’s Public Administration Cloud Adoption. Designed and maintained Ansible workflows for VMs hardening and OS-level tasks. Performed System Administration on RHEL. Promoted Agile (Kanban) practices and advocated for DevOps and GitOps principles.",
-    tags: ["Ansible", "AWX", "OCI, GCP","Terraform","RHEL","Bash","Terraform","VMWare vSphere (ESXi, vCenter)","SysAdm"],
+    description: "Developed Infrastructure Automation solutions for TIM and the Polo Strategico Nazionale (PSN), enabling Italy’s Public Administration Cloud Adoption. Designed and maintained Ansible workflows for VMs hardening and OS-level tasks. Performed System Administration on RHEL. Promoted Agile (Kanban) practices and advocated for DevOps and GitOps principles.",
+    tags: ["Ansible", "AWX", "OCI, GCP","Terraform","Red Hat Enterprise Linux","Bash","Terraform","VMWare vSphere (ESXi, vCenter)","System Administration"],
   },
   {
     period: "April 2024 — July 2025",
@@ -24,7 +24,7 @@ const EXPERIENCE = [
     location: "Bari, Apulia, IT",
     role: "Cloud DevOps Engineer",
     description: "Developed CI/CD Pipelines to automate infrastructure provisioning and Kubernetes cluster management on AWS EKS. Hardened AWS EKS clusters reducing lateral movement risk. Contributed to incident response & cluster troubleshooting. Built and maintained Terraform modules for multi-cloud environments. Performed multi-cloud cost analysis across AWS, GCP and Azure.",
-    tags: ["Kubernetes", "Kustomize","Dynatrace","Calico","AWS, GCP","Jenkins","Groovy","GitHub Actions","Terraform","Bash, Powershell","Python"],
+    tags: ["Kubernetes", "Kustomize","Dynatrace","Calico","AWS","GCP","Jenkins","Groovy","GitHub Actions","Terraform","Bash", "Powershell","Python"],
   },
   {
     period: "Sept 2023 — April 2024",
@@ -33,6 +33,6 @@ const EXPERIENCE = [
     location: "Bari, Apulia, IT",
     role: "DevOps Engineer & Technical trainer",
     description: "Developed automated test cases for database connectivity and query execution, worked with testing and quality tools and supported Java Applications Development. Configurated CI/CD pipelines for automated build, testing and deployment workflows. \n\n Delivered on site training sessions on Object-Oriented Programming, Java fundamentals, Software testing, Operating Systems and DevOps concepts. Designed & developed learning materials and evaluated hands-on coding exercises on Java Development.",
-    tags: ["Java", "Maven", "Lombok","Spring","Jenkins","JUnit, Selenium","Git, SVN, BitBucket","SQL","SonarQube","Postman, SoapUI"],
+    tags: ["Java", "Maven", "Lombok","Spring","Jenkins","JUnit", "Selenium","SQL","Teradata","Git", "SVN", "BitBucket","SQL","SonarQube","Postman", "SoapUI"],
   },
 ];
