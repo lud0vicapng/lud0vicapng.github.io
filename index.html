@@ -24,9 +24,11 @@
 
   <link rel="icon" type="image/png" href="assets/img/icons8-stella-isometric-line-32.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,300;0,400;0,500;0,700;1,300&family=Space+Grotesk:wght@400;700;800&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Sans+Mono:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Silkscreen&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Ubuntu+Sans+Mono:ital,wght@0,400..700;1,400..700&family=Space+Grotesk:wght@400;700;800&family=Silkscreen&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Sans+Mono:ital,wght@0,400..700;1,400..700&family=Space+Grotesk:wght@400;700;800&family=Silkscreen&display=swap" rel="stylesheet">
+  </noscript>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@2.17.0/devicon.min.css" integrity="sha384-6iv3tXABd3c9DYulXujJl8n22ahn/12f45MomxoPv6jBX4LBE4gNJjfkx5mAKIqR" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.44.0/dist/tabler-icons.min.css" integrity="sha384-ccZHbezhtZWmNy0cg8odL0D/jFU5k5HIls9y78Qd6lWor7rpvFIZtK0fTFG4z456" crossorigin="anonymous">
   <link rel="stylesheet" href="css/style.css">
@@ -82,8 +84,11 @@
         <div class="avatar-frame">
           <div class="avatar-hex"></div>
           <div class="avatar-circle">
-            <img src="assets/img/avatar.JPEG" alt="Me">
-            <div class="avatar-placeholder">MR</div>
+            <picture>
+              <source srcset="assets/img/avatar.webp" type="image/webp">
+              <img src="assets/img/foto.png" alt="Me" width="280" height="280" fetchpriority="high">
+            </picture>
+            <div class="avatar-placeholder">ME</div>
           </div>
           <div class="avatar-badge">ONLINE</div>
         </div>
@@ -305,8 +310,8 @@
       </div>
     </footer>
 
-    <script src="js/experience.js"></script>
-    <script src="js/projects.js"></script>
+    <script src="js/experience.js" defer></script>
+    <script src="js/projects.js" defer></script>
     <script src="js/main.js" defer></script>
 </body>
 

@@ -101,8 +101,7 @@ setInterval(() => {
 
 
 (function initScrollReveal() {
-  const elements = document.querySelectorAll('.job, .skill-item, .contact-row');
-
+  const elements = document.querySelectorAll('.job, .contact-row');
   const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry, i) => {
       if (entry.isIntersecting) {
@@ -120,23 +119,25 @@ setInterval(() => {
   const items = document.querySelectorAll('.skill-item');
 
   const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
+    entries.forEach((entry) => {
       if (entry.isIntersecting) {
         const fill = entry.target.querySelector('.skill-bar-fill');
-        const pct = entry.target.dataset.pct;
+        const pct  = entry.target.dataset.pct;
 
         if (fill && pct) {
-          setTimeout(() => {
-            fill.style.width = pct + '%';
-          }, 200);
+          fill.style.setProperty('--pct', pct / 100);
         }
+
+        requestAnimationFrame(() => {
+          entry.target.classList.add('visible');
+        });
 
         observer.unobserve(entry.target);
       }
     });
   }, { threshold: 0.2 });
 
-  items.forEach(el => observer.observe(el));
+  items.forEach((el) => observer.observe(el));
 })();
 
 
