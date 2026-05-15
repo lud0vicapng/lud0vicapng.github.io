@@ -90,29 +90,7 @@
   overflow: hidden;
 }
 
-.skill-item::before {
-  content: '';
-  position: absolute;
-  top: 0; left: 0;
-  width: 16px; height: 16px;
-  border-top: 1px solid var(--green);
-  border-left: 1px solid var(--green);
-  border-top-left-radius: 3px;
-  opacity: .5;
-  transition: opacity .25s;
-}
 
-.skill-item::after {
-  content: '';
-  position: absolute;
-  bottom: 0; right: 0;
-  width: 16px; height: 16px;
-  border-bottom: 1px solid var(--green);
-  border-right: 1px solid var(--green);
-  border-bottom-right-radius: 3px;
-  opacity: .5;
-  transition: opacity .25s;
-}
 
 .skill-item:hover {
   border-color: rgba(0, 255, 8, 0.3);
@@ -154,23 +132,24 @@
 
 .skill-level-indicator {
   display: flex;
-  gap: 5px;
-  padding-left: .8rem;
+  gap: 4px;
+  padding-left: 0.9rem;
 }
 
 .skill-cube {
   width: 10px;
   height: 10px;
+  background: rgba(22, 7, 31, 0.6); 
+  border: 1px solid var(--purple-glow, #a855f7);
   border-radius: 2px;
-  background: var(--border);
-  border: 1px solid rgba(0, 255, 159, .1);
-  transition: background-color .4s ease, box-shadow .4s ease, border-color .4s ease;
+  box-sizing: border-box;
+  transition: background-color 0.5s ease, border-color 0.5s ease, box-shadow 0.5s ease;
 }
 
 .skill-cube.active {
   background: var(--green);
   border-color: var(--green);
-  box-shadow: 0 0 5px var(--green), 0 0 10px var(--green-glow);
+  box-shadow: 0 0 4px var(--green), 0 0 8px var(--green-glow);
 }
 
 @media (max-width: 900px) {

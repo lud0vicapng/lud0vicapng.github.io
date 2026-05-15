@@ -150,7 +150,7 @@ setInterval(() => {
         item.appendChild(header);
 
         const levelIndicator = createElement('div', { class: 'skill-level-indicator' });
-        const MAX_CUBES = 3;
+        const MAX_CUBES = 4;
         const targetLevel = skill.level || 1;
 
         for (let c = 1; c <= MAX_CUBES; c++) {
