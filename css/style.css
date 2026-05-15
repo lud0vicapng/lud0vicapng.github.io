@@ -721,14 +721,44 @@ footer {
   font-family: var(--footer-font);
   font-size: 1.1rem;
 }
+
 .foot-copy { font-size: .72rem; color: var(--muted); }
 .foot-copy .hl { color: var(--green); }
-.foot-links { display: flex; gap: 1.5rem; }
-.foot-links a {
-  font-size: .72rem; color: var(--muted);
-  text-decoration: none; transition: color .2s;
+
+.foot-links { 
+  display: flex; 
+  gap: 1.5rem; 
+  align-items: center;
 }
-.foot-links a:hover { color: var(--green); }
+
+.foot-links a {
+  font-size: .72rem; 
+  color: var(--muted);
+  text-decoration: none; 
+  transition: color .2s, transform .2s;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.foot-links a i {
+  font-size: 1.25rem; 
+}
+
+.foot-links a:hover { 
+  color: var(--green); 
+}
+
+.foot-links .foot-credits {
+  font-size: .72rem;
+  opacity: 0.7;
+  transition: opacity .2s, color .2s;
+}
+
+.foot-links .foot-credits:hover {
+  opacity: 1;
+  transform: none; 
+}
 
 /* projects */
 .projects-grid {
