@@ -738,7 +738,7 @@ footer {
 }
 
 .project-card {
-  background: var(--surface);
+  background: transparent;
   border: 1px solid var(--border);
   border-radius: 6px;
   padding: 1.4rem 1.6rem;
@@ -748,9 +748,46 @@ footer {
   opacity: 0;
   transform: translateY(14px);
   transition: opacity .5s, transform .5s, border-color .2s;
+  position: relative;
 }
 .project-card.visible { opacity: 1; transform: none; }
-.project-card:hover { border-color: rgba(0, 255, 159, .25); }
+
+.project-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  z-index: 1;
+  background: linear-gradient(135deg, var(--purple, #a855f7) 0%, var(--green, #00ff9f) 100%);
+  border-radius: 6px;
+  filter: blur(15px);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  pointer-events: none;
+}
+
+.project-card::after {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: var(--surface);
+  border-radius: 5px;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.project-card > * {
+  position: relative;
+  z-index: 3; 
+}
+
+.project-card:hover { 
+  border-color: rgba(0, 255, 159, .4);
+}
+
+.project-card:hover::before {
+  opacity: 0.4;
+}
+.project-card.visible { opacity: 1; transform: none; }
 
 .project-card-top {
   display: flex;
@@ -768,9 +805,9 @@ footer {
   animation: statusBlink 1.8s ease-in-out infinite;
 }
 
-.project-status .status-dot.live {
+.project-status .status-dot.online {
   background: var(--green);
-  box-shadow: 0 0 6px var(--green), 0 0 12px var(--green-glow);
+  box-shadow: 0 0 4px var(--green), 0 0 12px var(--green-glow);
 }
 
 .project-status .status-dot.wip {

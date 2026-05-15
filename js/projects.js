@@ -4,7 +4,7 @@ const PROJECTS = [
     description: "A discord bot that performs autonomous user moderation using AI Agents.",
     icon: "devicon-python-plain",
     tags: ["Python", "OpenAI Agents SDK","discord.py", "Ollama", "qwen3:8b", "Docker"],
-    status: "live",
+    status: "online",
     url: "https://github.com/lud0vicapng/Moderaten-Bot",
   },
   {

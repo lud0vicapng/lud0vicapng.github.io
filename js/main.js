@@ -256,7 +256,7 @@ setInterval(() => {
   if (!grid || typeof PROJECTS === 'undefined') return;
 
   const statusMap = {
-    live: { label: 'live', color: 'var(--green)', dot: 'live' },
+    online: { label: 'online', color: 'var(--green)', dot: 'online' },
     wip: { label: 'wip', color: '#ffbd2e', dot: 'work in progress' },
     archived: { label: 'archived', color: '#818181', dot: 'archived' },
     learning: { label: 'learning', color: 'var(--purple)', dot: 'learning' },

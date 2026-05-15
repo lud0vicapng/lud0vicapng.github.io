@@ -15,7 +15,7 @@ const EXPERIENCE = [
     location: "Bari, Apulia, IT",
     role: "Cloud Infrastructure Engineer",
     description: "Developed Infrastructure Automation solutions for TIM and the Polo Strategico Nazionale (PSN), enabling Italy’s Public Administration Cloud Adoption. Designed and maintained Ansible workflows for VMs hardening and OS-level tasks. Performed System Administration on RHEL. Promoted Agile (Kanban) practices and advocated for DevOps and GitOps principles.",
-    tags: ["Ansible", "AWX", "OCI, GCP","Terraform","Red Hat Enterprise Linux","Bash","Terraform","VMWare vSphere (ESXi, vCenter)","System Administration"],
+    tags: ["Ansible", "AWX", "OCI", "GCP","Terraform","Red Hat Enterprise Linux","Bash","Terraform","VMWare vSphere (ESXi, vCenter)","System Administration"],
   },
   {
     period: "April 2024 — July 2025",
