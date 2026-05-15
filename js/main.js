@@ -173,13 +173,16 @@ setInterval(() => {
       const sep = createElement('div', { class: 'skills-separator' });
       container.appendChild(sep);
     }
-    
   });
 
   const allObserved = container.querySelectorAll('.skills-block, .skills-separator');
+  const allObservedElements = Array.from(allObserved);
+
   const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry, i) => {
+    entries.forEach((entry) => {
       if (entry.isIntersecting) {
+        const realIndex = allObservedElements.indexOf(entry.target);
+
         setTimeout(() => {
           entry.target.classList.add('visible');
 
@@ -192,12 +195,15 @@ setInterval(() => {
             });
           }
 
-        }, i * 150);
+        }, realIndex * 150);
 
         observer.unobserve(entry.target);
       }
     });
-  }, { threshold: 0.1 });
+  }, { 
+    threshold: 0.05, 
+    rootMargin: "0px 0px -30px 0px" 
+  });
 
   allObserved.forEach(b => observer.observe(b));
 })();
