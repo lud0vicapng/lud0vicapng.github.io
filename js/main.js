@@ -114,32 +114,93 @@ setInterval(() => {
   elements.forEach(el => observer.observe(el));
 })();
 
+(function initSkills() {
+  const container = document.getElementById('skills-container');
+  const createElement = typeof el === 'function' ? el : (tag, options = {}) => {
+    const node = document.createElement(tag);
+    if (options.class) node.className = options.class;
+    if (options.text != null) node.textContent = options.text;
+    return node;
+  };
 
-(function initSkillBars() {
-  const items = document.querySelectorAll('.skill-item');
+  if (!container || typeof SKILLS === 'undefined') return;
 
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        const fill = entry.target.querySelector('.skill-bar-fill');
-        const pct  = entry.target.dataset.pct;
+  container.textContent = '';
 
-        if (fill && pct) {
-          fill.style.setProperty('--pct', pct / 100);
+  SKILLS.forEach((block, index) => {
+    const skillsBlock = createElement('div', { class: 'skills-block' });
+
+    const category = createElement('div', { class: 'skills-category', text: block.category });
+    skillsBlock.appendChild(category);
+
+    const blockContent = createElement('div', { class: 'skills-block-content' });
+
+    blockContent.style.gridTemplateColumns = `repeat(${block.columns || 2}, 1fr)`;
+
+    if (block.items && Array.isArray(block.items)) {
+      block.items.forEach(skill => {
+        const item = createElement('div', { class: 'skill-item' });
+
+        const header = createElement('div', { class: 'skill-header' });
+        const name = createElement('span', { class: 'skill-name' });
+        const dot = createElement('span', { class: 'lang', text: '●' });
+        name.appendChild(dot);
+        name.append(` ${skill.name}`);
+        header.appendChild(name);
+        item.appendChild(header);
+
+        const levelIndicator = createElement('div', { class: 'skill-level-indicator' });
+        const MAX_CUBES = 3;
+        const targetLevel = skill.level || 1;
+
+        for (let c = 1; c <= MAX_CUBES; c++) {
+          const cube = createElement('div', { class: 'skill-cube' });
+          if (c <= targetLevel) {
+            cube.setAttribute('data-active', 'true');
+          }
+          levelIndicator.appendChild(cube);
         }
 
-        requestAnimationFrame(() => {
+        item.appendChild(levelIndicator);
+        blockContent.appendChild(item);
+      });
+    }
+
+    skillsBlock.appendChild(blockContent);
+    container.appendChild(skillsBlock);
+
+    if (index < SKILLS.length - 1) {
+      const sep = createElement('div', { class: 'skills-separator' });
+      container.appendChild(sep);
+    }
+    
+  });
+
+  const allObserved = container.querySelectorAll('.skills-block, .skills-separator');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry, i) => {
+      if (entry.isIntersecting) {
+        setTimeout(() => {
           entry.target.classList.add('visible');
-        });
+
+          if (entry.target.classList.contains('skills-block')) {
+            const cubesToActivate = entry.target.querySelectorAll('.skill-cube[data-active="true"]');
+            cubesToActivate.forEach((cube, cubeIdx) => {
+              setTimeout(() => {
+                cube.classList.add('active');
+              }, cubeIdx * 120);
+            });
+          }
+
+        }, i * 150);
 
         observer.unobserve(entry.target);
       }
     });
-  }, { threshold: 0.2 });
+  }, { threshold: 0.1 });
 
-  items.forEach((el) => observer.observe(el));
+  allObserved.forEach(b => observer.observe(b));
 })();
-
 
 (function initNavHighlight() {
   const sections = document.querySelectorAll('section[id], div[id].section-wrap, div[id]');
@@ -177,7 +238,7 @@ setInterval(() => {
   }
 
   function clearOutput() {
-    output.innerHTML = '';
+    output.textContent = '';
   }
 
   function validate(name, email, msg) {
@@ -197,12 +258,12 @@ setInterval(() => {
     Message:
     ${msg}`;
 
-        const mailtoLink =
-          `mailto:${MAIL_TO}` +
-          `?subject=${encodeURIComponent(subject)}` +
-          `&body=${encodeURIComponent(body)}`;
+    const mailtoLink =
+      `mailto:${MAIL_TO}` +
+      `?subject=${encodeURIComponent(subject)}` +
+      `&body=${encodeURIComponent(body)}`;
 
-        window.location.href = mailtoLink;
+    window.location.href = mailtoLink;
   }
 
   btn.addEventListener('click', () => {
@@ -262,7 +323,7 @@ setInterval(() => {
     learning: { label: 'learning', color: 'var(--purple)', dot: 'learning' },
   };
 
-  grid.innerHTML = '';
+  grid.textContent = '';
 
   PROJECTS.forEach(p => {
     const s = statusMap[p.status] || statusMap.wip;
@@ -345,7 +406,7 @@ setInterval(() => {
   const timeline = document.getElementById('experienceTimeline');
   if (!timeline || typeof EXPERIENCE === 'undefined') return;
 
-  timeline.innerHTML = '';
+  timeline.textContent = '';
 
   EXPERIENCE.forEach(e => {
     const job = el('div', { class: 'job' });
